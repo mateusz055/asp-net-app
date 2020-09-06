@@ -1,0 +1,22 @@
+﻿.square {
+    width: 25%;
+    height: 33%;
+    position: relative;
+}
+
+.margin {
+    margin-top: 20%;
+}
+
+.margin-two {
+    margin-top: 4%;
+}
+
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
