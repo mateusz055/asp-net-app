@@ -1,11 +1,13 @@
 ﻿
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "moviesearch";
 }
+
 <html>
 
 <head>
-    
+    <title></title>
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
           integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -20,30 +22,24 @@
     <link rel="stylesheet" href="~/Styles/StyleSheet1.css">
 </head>
 
-<body>
-    <div class=" login-panel rounded-lg bg-secondary   border-primary square  px-md-5 center">
-        <div class="input-group flex-nowrap">
-            <div class="input-group-prepend">
-
-            </div>
-            <input type="text" class="form-control margin " placeholder="Username" aria-label="Username"
-                   aria-describedby="addon-wrapping">
+<body class="color-body">
+    <div class="input-group flex-nowrap">
+        <div class="input-group-prepend  ">
+            <span class="input-group-text" id="addon-wrapping"></span>
         </div>
-        <div class="input-group flex-nowrap">
-            <div class="input-group-prepend">
-
-            </div>
-            <input type="text" class="form-control margin-two" placeholder="Password" aria-label="Password"
-                   aria-describedby="addon-wrapping">
-        </div>
-        <button type="button" class="btn btn-outline-success  margin-two">Success</button>
-
+        <input type="text" class="form-control size mx-auto" size="50" placeholder="Wpisz nazwe filmu"
+               aria-label="Wpisz nazwe filmu" aria-describedby="addon-wrapping">
+        <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false">
+            Szukaj
+        </button>
+    </div>
+    <div class="movie-space center rounded-lg border border-primary">
 
 
 
     </div>
+
 </body>
 
 </html>
-
 

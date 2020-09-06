@@ -20,3 +20,13 @@
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
+.movie-space {
+    background-color: whitesmoke;
+    width: 45%;
+    height: 53%;
+    border: 10px;
+}
+
+.color-body {
+    background-color: #4b5d67;
+}
