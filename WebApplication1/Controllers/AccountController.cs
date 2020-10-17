@@ -31,5 +31,13 @@ namespace WebApplication1.Controllers
             }
             
         }
+        public ActionResult Conections()
+        {
+            Database database = new Database();
+            database.OpenConnection();
+            return View("Index");
+        }
+
     }
+    
 }
