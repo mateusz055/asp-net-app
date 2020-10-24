@@ -23,7 +23,7 @@ namespace WebApplication1.Models
         {
             server = "127.0.0.1";
             database = "wyszukiwanie_film";
-            uid = "root@localhost";
+            uid = "root";
             password = "1234";
             string connectionString;
             connectionString = "SERVER=" + server + ";" + "DATABASE=" +
@@ -46,20 +46,30 @@ namespace WebApplication1.Models
             list[0] = new List<string>();
             list[1] = new List<string>();
             list[2] = new List<string>();
-            {
+            
 
                 MySqlCommand cmd = new MySqlCommand(query, connection);
                 MySqlDataReader dataReader = cmd.ExecuteReader();
-                while (dataReader.Read())
+                if (dataReader.HasRows)
                 {
-                    list[0].Add(dataReader["id_uzytkownika"] + "");
-                    list[1].Add(dataReader["login"] + "");
-                    list[2].Add(dataReader["haslo"] + "");
+                    while (dataReader.Read())
+                    {
+                        list[0].Add(dataReader["id_uzytkownika"] + "");
+                        list[1].Add(dataReader["login"] + "");
+                        list[2].Add(dataReader["haslo"] + "");
+                    }
+
+                    dataReader.Close();
+                    this.CloseConnection();
+                    return list;
+
+                }else
+                {
+                    return list;
+
                 }
-                dataReader.Close();
-                this.CloseConnection();
-                return list;
-            }       
+
+                   
         }
     }
 }

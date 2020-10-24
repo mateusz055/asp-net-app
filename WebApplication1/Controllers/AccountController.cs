@@ -8,12 +8,20 @@ using WebApplication1.ViewModels;
 
 namespace WebApplication1.Controllers
 {
+    
     public class AccountController : Controller
     {
-        
+        List<string>[] userList = new List<string>[3];
+            
         public ActionResult Index()
         {
-            
+            userList[0] = new List<string>();
+            userList[1] = new List<string>();
+            userList[2] = new List<string>();
+            Database database = new Database();
+            database.OpenConnection();
+            userList = database.LoginSelect();
+            ViewData["logins"] =  userList[1];
             return View();
         }
         [HttpPost]
@@ -33,8 +41,8 @@ namespace WebApplication1.Controllers
         }
         public ActionResult Conections()
         {
-            Database database = new Database();
-            database.OpenConnection();
+            
+            ViewData["logins"] = userList[1];
             return View("Index");
         }
 
