@@ -24,13 +24,6 @@
 </head>
 
 <body>
-    <button type="button" value="polacz z baza" onclick="location.href='@Url.Action("Conections", "Account")'">połącz z bazą</button>
-    @foreach (var login in ViewData["logins"] as List<string>)
-    {
-        @login
-    }
-
-
 
     @using (Html.BeginForm("Login", "Account"))
     {

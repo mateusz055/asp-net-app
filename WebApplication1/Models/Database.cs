@@ -41,7 +41,7 @@ namespace WebApplication1.Models
         }
         public List<string>[] LoginSelect()
         {
-            string query = "SELECT id_uzytkownika,login,haslo FROM uzytkownicy";
+            string query = "SELECT id_uzytkownika,login,haslo FROM uzytkownicy WHERE id_uzytkownika=1";
             List<string>[] list = new List<string>[3];
             list[0] = new List<string>();
             list[1] = new List<string>();
