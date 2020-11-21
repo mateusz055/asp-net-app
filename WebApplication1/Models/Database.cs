@@ -46,30 +46,63 @@ namespace WebApplication1.Models
             list[0] = new List<string>();
             list[1] = new List<string>();
             list[2] = new List<string>();
-            
 
-                MySqlCommand cmd = new MySqlCommand(query, connection);
-                MySqlDataReader dataReader = cmd.ExecuteReader();
-                if (dataReader.HasRows)
+
+            MySqlCommand cmd = new MySqlCommand(query, connection);
+            MySqlDataReader dataReader = cmd.ExecuteReader();
+            if (dataReader.HasRows)
+            {
+                while (dataReader.Read())
                 {
-                    while (dataReader.Read())
-                    {
-                        list[0].Add(dataReader["id_uzytkownika"] + "");
-                        list[1].Add(dataReader["login"] + "");
-                        list[2].Add(dataReader["haslo"] + "");
-                    }
-
-                    dataReader.Close();
-                    this.CloseConnection();
-                    return list;
-
-                }else
-                {
-                    return list;
-
+                    list[0].Add(dataReader["id_uzytkownika"] + "");
+                    list[1].Add(dataReader["login"] + "");
+                    list[2].Add(dataReader["haslo"] + "");
                 }
 
-                   
+                dataReader.Close();
+                this.CloseConnection();
+                return list;
+
+            } else
+            {
+                return list;
+
+            }
+
+
+        }
+        public List<string>[] MovieSelect()
+        {
+            string query = "SELECT id_filmu,tytul,opis,autor FROM filmy ";
+            List<string>[] list = new List<string>[4];
+            list[0] = new List<string>();
+            list[1] = new List<string>();
+            list[2] = new List<string>();
+            list[3] = new List<string>();
+
+
+            MySqlCommand cmd = new MySqlCommand(query, connection);
+            MySqlDataReader dataReader = cmd.ExecuteReader();
+            if (dataReader.HasRows)
+            {
+                while (dataReader.Read())
+                {
+                    list[0].Add(dataReader["id_filmu"] + "");
+                    list[1].Add(dataReader["tytul"] + "");
+                    list[2].Add(dataReader["opis"] + "");
+                    list[3].Add(dataReader["autor"] + "");
+                }
+
+                dataReader.Close();
+                this.CloseConnection();
+                return list;
+
+            }
+            else
+            {
+                return list;
+
+            }
         }
     }
 }

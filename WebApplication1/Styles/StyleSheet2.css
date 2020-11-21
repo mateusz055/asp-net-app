@@ -1,0 +1,119 @@
+﻿.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content {
+    height: 100%
+}
+
+/* Set gray background color and 100% height */
+.sidenav {
+    padding-top: 20px;
+    height: 100%;
+}
+
+/* Set black background color, white text and some padding */
+footer {
+    background-color: #343a40;
+    padding: 15px;
+}
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+    .sidenav {
+        height: auto;
+        padding: 15px;
+    }
+
+    .row.content {
+        height: auto;
+    }
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body {
+    padding: 0;
+    font-family: sans-serif;
+    background: linear-gradient(to right, #b92b27, #1565c0)
+}
+
+.bg {
+    background-color: #E4E4E7;
+    border: 3px solid #2f3e46;
+    border-radius: 25px;
+}
+
+.inf {
+    position: absolute;
+    bottom: 33.5%;
+    font-size: 18px;
+    width: 30%;
+    height: 20%;
+    margin-left: 2%;
+    right: 18%;
+}
+
+.infk {
+    position: absolute;
+    bottom: 33.5%;
+    margin-right: 25px;
+    left: 18%;
+    font-size: 18px;
+    width: 30%;
+    height: 20%;
+}
+
+.infs {
+    position: absolute;
+    bottom: 5px;
+    left: 320px;
+    right: 10px;
+    font-size: 18px;
+    width: 67%;
+    height: 30%;
+}
+
+input[type="text"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #3498db;
+    padding: 10px 10px;
+    width: 250px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s
+}
+
+    input[type="text"]:focus {
+        width: 300px;
+        border-color: #2ecc71
+    }
+
+input[type="submit"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #2ecc71;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer
+}
+
+    input[type="submit"]:hover {
+        background: #2ecc71
+    }

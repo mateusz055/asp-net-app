@@ -38,7 +38,7 @@ namespace WebApplication1.Controllers
             if (avm.account.Username.Equals(login)&& avm.account.Password.Equals(pass))
             {
                 Session["username"] = avm.account.Username;
-                return View("Welcome");
+                return RedirectToAction("Moviesearch", "Movie");
             }
             else
             {
