@@ -21,17 +21,16 @@
         @using (Html.BeginForm("GetMovieInfo", "Movie", FormMethod.Post))
         {
             <div class="container-fluid">
-                <div class="navbar-header">
-                    <center>
-                        @Html.TextBoxFor(model => model.Movie)
-                    </center>
-                </div>
+                @Html.TextBoxFor(model => model.Movie)
                 <div class="collapse navbar-collapse" id="myNavbar">
                 </div>
             </div>
-           
+
             <input type="submit" name="" value="Search" href="#">
         }
+        <input type="button"
+               value="Go Somewhere Else"
+               onclick="location.href='<%: Url.Action("sds", "Movie" ) %>'" />
     </nav>
 
     <div class="container-fluid text-center">
@@ -42,14 +41,17 @@
 
             <div class="col-sm-8 text-left bg">
                 <h1>Welcome</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                @ViewBag.movieid
+
+
+
                 <hr>
                 <h3>Test</h3>
                 <p>Lorem ipsum...</p>
             </div>
-            <div class="bg inf"></div>
-            <div class="bg infk"></div>
-            <div class="bg infs"></div>
+            <div class="bg inf">@ViewBag.title</div>
+            <div class="bg infk"> @ViewBag.description</div>
+            
         </div>
     </div>
 </body>

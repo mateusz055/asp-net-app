@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Windows.Forms;
 //Add MySql 
 using MySql.Data.MySqlClient;
+using WebApplication1.ViewModels;
 
 namespace WebApplication1.Models
 {
@@ -71,9 +73,9 @@ namespace WebApplication1.Models
 
 
         }
-        public List<string>[] MovieSelect()
-        {
-            string query = "SELECT id_filmu,tytul,opis,autor FROM filmy ";
+        public List<string>[] MovieSelect(string query)
+        {  
+            
             List<string>[] list = new List<string>[4];
             list[0] = new List<string>();
             list[1] = new List<string>();

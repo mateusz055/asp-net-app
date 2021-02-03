@@ -69,15 +69,7 @@ body {
     height: 20%;
 }
 
-.infs {
-    position: absolute;
-    bottom: 5px;
-    left: 320px;
-    right: 10px;
-    font-size: 18px;
-    width: 67%;
-    height: 30%;
-}
+
 
 input[type="text"] {
     border: 0;
